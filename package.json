@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon .server/server.js",
+    "start": "nodemon ./server/server.js",
     "db": "brew services start mongodb",
     "react-dev": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
