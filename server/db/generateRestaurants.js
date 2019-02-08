@@ -1,35 +1,5 @@
-const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/hippos');
-
-// Model definition
-const restaurantSchema = new mongoose.Schema({
-  restaurantId: Number,
-  name: String,
-  headline: String,
-  tags: {
-    search: String,
-    location: String,
-    price: Number,
-  },
-  scores: {
-    food: Number,
-    decor: Number,
-    service: Number,
-  },
-  description: String,
-  knownFor: [{
-    name: String,
-    icon: String,
-  }],
-  whatToOrder: [{
-    name: String,
-    icon: String,
-  }],
-  insiderTip: String,
-});
-
-const restaurant = mongoose.model('restaurant', restaurantSchema);
+const { restaurant } = require('./schemas.js');
+const { db } = require('./db.js');
 
 // Helper functions
 const randIdx = length => Math.floor(Math.random() * length);
@@ -636,7 +606,6 @@ const generateOrder = () => {
 };
 
 const generateTip = () => {
-  // Return undefined if no tip
   const tips = [
     'Health goth pop-up lyft raw denim 8-bit stumptown.',
     'For an affordable taste of that legendary dry-aged Luger beef, go at lunchtime and order the burger for $14 (served daily till 3:45PM).',
@@ -664,7 +633,7 @@ const generateRestaurant = (id) => {
   };
 };
 
-const db = mongoose.connection;
+// Store data functions
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected! Ready to insert data...');

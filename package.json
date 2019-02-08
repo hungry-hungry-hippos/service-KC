@@ -13,7 +13,9 @@
     "react-dev": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./",
-    "seed-restaurants": "node ./server/db/generateRestaurants.js"
+    "seed-restaurants": "node ./server/db/generateRestaurants.js",
+    "seed-articles": "node ./server/db/generateArticles.js",
+    "seed-reviews": "node ./server/db/generateReviews.js"
   },
   "dependencies": {
     "express": "^4.16.4",

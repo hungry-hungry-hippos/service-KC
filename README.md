@@ -18,6 +18,8 @@
 ## Usage
 
 > To seed restaurants, run `npm run seed-restaurants`
+> To seed articles, run `npm run seed-articles`
+> To seed reviews, run `npm run seed-reviews`
 
 ## Requirements
 

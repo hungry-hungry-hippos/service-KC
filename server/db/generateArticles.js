@@ -1,19 +1,31 @@
-const mongoose = require('mongoose');
+const { article } = require('./schemas.js');
+const { db } = require('./db.js');
 
-mongoose.connect('mongodb://localhost/hippos');
+// Helper functions
+const randIdx = length => Math.floor(Math.random() * length);
 
-const articleSchema = new mongoose.Schema({
-  restaurantId: Number,
-  name: String,
-  url: String,
-});
+const toInclude = (prob, includeVal, notIncludeVal) => {
+  if (Math.floor(Math.random() * 100) < prob) return includeVal;
+  return notIncludeVal;
+};
 
-const article = mongoose.model('article', articleSchema);
+// Random generation functions
 
-const db = mongoose.connection;
+
+// Store data functions
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected! Ready to insert data...');
 
+  // Generate data
+  const articles = [
+
+  ];
+
   // Insert data
+  article.insertMany(articles, (err) => {
+    if (err) throw err;
+    console.log('Successful insert of articles!');
+    db.close(() => console.log('DB closed!'));
+  });
 });
