@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/hippos');
 
-let reviewSchema = new mongoose.Schema({
+const reviewSchema = new mongoose.Schema({
   restaurantId: Number,
   name: String,
   image: String,
@@ -11,7 +12,7 @@ let reviewSchema = new mongoose.Schema({
   description: String,
 });
 
-let review = mongoose.model('review', reviewSchema);
+const review = mongoose.model('review', reviewSchema);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

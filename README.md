@@ -17,7 +17,7 @@
 
 ## Usage
 
-> Some usage instructions
+> To seed restaurants, run `npm run seed-restaurants`
 
 ## Requirements
 
