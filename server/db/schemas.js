@@ -31,7 +31,7 @@ const restaurant = mongoose.model('restaurant', restaurantSchema);
 
 // Article model definition
 const articleSchema = new mongoose.Schema({
-  restaurantIds: Array,
+  restaurantIds: [Number],
   name: String,
   url: String,
 });

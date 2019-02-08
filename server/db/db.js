@@ -17,7 +17,29 @@ const getRestaurant = (id, cb) => {
   });
 };
 
+const getArticles = (id, cb) => {
+  article.find({ restaurantIds: id }, (err, data) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, data);
+    }
+  });
+};
+
+const getReviews = (id, cb) => {
+  review.findOne({ restaurantId: id }, (err, data) => {
+    if (err) {
+      cb(err, null);
+    } else {
+      cb(null, data);
+    }
+  });
+};
+
 module.exports = {
   db,
   getRestaurant,
+  getArticles,
+  getReviews,
 };

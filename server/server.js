@@ -11,8 +11,21 @@ app.use(morgan('default'));
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
 
 app.get('/restaurants/:id', (req, res) => {
-  // req.params.id
   db.getRestaurant(req.params.id, (err, data) => {
+    if (err) throw err;
+    res.send(data);
+  });
+});
+
+app.get('/articles/:id', (req, res) => {
+  db.getArticles(req.params.id, (err, data) => {
+    if (err) throw err;
+    res.send(data);
+  });
+});
+
+app.get('/reviews/:id', (req, res) => {
+  db.getReviews(req.params.id, (err, data) => {
     if (err) throw err;
     res.send(data);
   });
