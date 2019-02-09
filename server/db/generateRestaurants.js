@@ -423,7 +423,7 @@ const generateName = () => {
     'Trattoria',
   ];
 
-  return `${colA[randIdx(colA.length)]} ${colB[randIdx(colB.length)]}${toInclude(35, ' ' + colC[randIdx(colC.length)], '')}`;
+  return `${colA[randIdx(colA.length)]} ${colB[randIdx(colB.length)]}${toInclude(35, ' '.concat(colC[randIdx(colC.length)]), '')}`;
 };
 
 const generateHeadline = () => {
@@ -489,13 +489,13 @@ const generateTags = () => {
   };
 };
 
-const generateScores = () => {
-  return {
+const generateScores = () => (
+  {
     food: (randIdx(50) + 1) / 10,
     decor: (randIdx(50) + 1) / 10,
     service: (randIdx(50) + 1) / 10,
-  };
-};
+  }
+);
 
 const generateDescription = () => {
   const descriptions = [
@@ -561,7 +561,7 @@ const generateKnownFor = () => {
 
   const numberKnowns = randIdx(5) + 1;
   const knownFor = [];
-  for (let i = 0; i < numberKnowns; i++) {
+  for (let i = 0; i < numberKnowns; i += 1) {
     knownFor.push(knowns[randIdx(knowns.length)]);
   }
 
@@ -599,7 +599,7 @@ const generateOrder = () => {
 
   const numberOrders = randIdx(3) + 1;
   const whatToOrder = [];
-  for (let i = 0; i < numberOrders; i++) {
+  for (let i = 0; i < numberOrders; i += 1) {
     whatToOrder.push(orders[randIdx(orders.length)]);
   }
   return toInclude(10, whatToOrder, undefined);
@@ -619,8 +619,8 @@ const generateTip = () => {
   return toInclude(10, tips[randIdx(tips.length)], undefined);
 };
 
-const generateRestaurant = (id) => {
-  return {
+const generateRestaurant = id => (
+  {
     restaurantId: id,
     name: generateName(),
     headline: generateHeadline(),
@@ -630,8 +630,8 @@ const generateRestaurant = (id) => {
     knownFor: generateKnownFor(),
     whatToOrder: generateOrder(),
     insiderTip: generateTip(),
-  };
-};
+  }
+);
 
 // Store data functions
 db.on('error', console.error.bind(console, 'connection error:'));

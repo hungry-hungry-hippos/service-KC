@@ -28,7 +28,7 @@ const getArticles = (id, cb) => {
 };
 
 const getReviews = (id, cb) => {
-  review.findOne({ restaurantId: id }, (err, data) => {
+  review.find({ restaurantId: id }, (err, data) => {
     if (err) {
       cb(err, null);
     } else {

@@ -47,13 +47,13 @@ const generateImage = () => {
   return images[randIdx(images.length)];
 };
 
-const generateArticle = () => {
-  return {
+const generateArticle = () => (
+  {
     restaurantIds: generateRestaurants(),
     name: generateName(),
     image: generateImage(),
-  };
-};
+  }
+);
 
 // Store data functions
 db.on('error', console.error.bind(console, 'connection error:'));
