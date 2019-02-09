@@ -33,7 +33,7 @@ const restaurant = mongoose.model('restaurant', restaurantSchema);
 const articleSchema = new mongoose.Schema({
   restaurantIds: [Number],
   name: String,
-  url: String,
+  image: String,
 });
 
 const article = mongoose.model('article', articleSchema);
