@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Calibre-Regular';
+  src: url('/assets/CalibreWeb-Regular.woff2') format('woff2');
+}
+
+h1 {
+  font-family: 'Calibre-Regular', sans-serif;
+  letter-spacing: .086em;
+  font-size: 28px;
+}
