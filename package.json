@@ -11,7 +11,7 @@
     "start": "nodemon ./server/server.js",
     "db": "brew services start mongodb",
     "react-dev": "webpack -d --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint ./",
     "seed-restaurants": "node ./server/db/generateRestaurants.js",
     "seed-articles": "node ./server/db/generateArticles.js",
