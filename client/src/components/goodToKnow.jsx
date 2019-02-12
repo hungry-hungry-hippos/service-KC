@@ -83,7 +83,7 @@ class GoodToKnow extends React.Component {
     return (
       <div>
         <h2>Good To Know</h2>
-        {restaurant.whatToOrder ? <h3>What To Order</h3> : ''}
+        {whatToOrder.length ? <h3>What To Order</h3> : ''}
         {whatToOrder}
         {restaurant.insiderTip ? (
           <div>
@@ -91,7 +91,7 @@ class GoodToKnow extends React.Component {
             <div>{restaurant.insiderTip}</div>
           </div>
         ) : ''}
-        {restaurant.knownFor ? <h3>Known For</h3> : ''}
+        {knownFor.length ? <h3>Known For</h3> : ''}
         {knownFor}
         {articles.length ? (
           <h3>
