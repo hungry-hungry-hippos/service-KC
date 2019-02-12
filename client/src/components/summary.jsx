@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TagList from './summaryTags';
+import ZReview from './summaryReview';
 
 class Summary extends React.Component {
   constructor(props) {
@@ -32,44 +34,13 @@ class Summary extends React.Component {
   render() {
     const { restaurant } = this.state;
 
-    let tags = '';
-    if (restaurant.tags) {
-      tags = (
-        <div>
-          {
-            Object.keys(restaurant.tags)
-              .map(key => (
-                <a href={`/${restaurant.restaurantId}`} key={key}>{restaurant.tags[key]}</a>
-              ))
-              .reduce((prev, curr) => [prev, ' · ', curr])
-          }
-        </div>
-      );
-    }
-
-    let scores = '';
-    if (restaurant.scores) {
-      scores = (
-        <div>
-          {
-            Object.keys(restaurant.scores)
-              .map(key => (
-                <p key={key}>{`${key} : ${restaurant.scores[key]}`}</p>
-              ))
-          }
-        </div>
-      );
-    }
-
     return (
       <div id="summary">
         <h2>Summary</h2>
         <h1>{restaurant.name}</h1>
         <p>{restaurant.headline}</p>
-        {tags}
-        {restaurant.description ? <h3>The Zagat Review</h3> : ''}
-        {scores}
-        <p dangerouslySetInnerHTML={{ __html: restaurant.description }} />
+        <TagList id={restaurant.restaurantId} tags={restaurant.tags} />
+        <ZReview description={restaurant.description} scores={restaurant.scores} />
       </div>
     );
   }

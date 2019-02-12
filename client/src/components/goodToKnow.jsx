@@ -85,7 +85,7 @@ class GoodToKnow extends React.Component {
     }
 
     return (
-      <div>
+      <div id="goodtoknow">
         <h2>Good To Know</h2>
         {whatToOrder.length ? <h3>What To Order</h3> : ''}
         {whatToOrder}
