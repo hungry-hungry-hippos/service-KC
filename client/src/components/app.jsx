@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <div>
         <Summary id={restaurantId} />
-        {/* <GoodToKnow /> */}
+        <GoodToKnow id={restaurantId} />
         {/* <Reviews /> */}
       </div>
     );

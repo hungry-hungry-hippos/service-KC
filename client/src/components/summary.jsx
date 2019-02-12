@@ -31,6 +31,7 @@ class Summary extends React.Component {
 
   render() {
     const { restaurant } = this.state;
+
     let tags = '';
     if (restaurant.tags) {
       tags = (
@@ -38,13 +39,14 @@ class Summary extends React.Component {
           {
             Object.keys(restaurant.tags)
               .map(key => (
-                <span key={key}>{restaurant.tags[key]}</span>
+                <a href={`/${restaurant.restaurantId}`} key={key}>{restaurant.tags[key]}</a>
               ))
               .reduce((prev, curr) => [prev, ' · ', curr])
           }
         </div>
       );
     }
+
     let scores = '';
     if (restaurant.scores) {
       scores = (
