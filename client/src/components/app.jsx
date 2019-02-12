@@ -3,13 +3,36 @@ import Summary from './summary';
 import GoodToKnow from './goodToKnow';
 import Reviews from './reviews';
 
-const App = () => (
-  <div>
-    <h1>GABRIEL KREUTHER</h1>
-    <Summary />
-    <GoodToKnow />
-    <Reviews />
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    let id = 1;
+
+    const pathName = window.location.pathname.split('/');
+
+    const pathId = Number.parseInt(pathName[1], 10);
+    if (!Number.isNaN(pathId)) {
+      id = pathId;
+    }
+
+    this.state = {
+      restaurantId: id,
+    };
+  }
+
+  render() {
+    const { restaurantId } = this.state;
+
+    return (
+      <div>
+        <h1>GABRIEL KREUTHER</h1>
+        <Summary id={restaurantId} />
+        <GoodToKnow />
+        <Reviews />
+      </div>
+    );
+  }
+}
 
 export default App;

@@ -22,6 +22,7 @@
     "express": "^4.16.4",
     "mongoose": "^5.4.10",
     "morgan": "^1.9.1",
+    "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "styled-components": "^4.1.3"
@@ -45,6 +46,8 @@
     "webpack-cli": "^3.2.3"
   },
   "jest": {
-    "setupFiles": ["./setupTests.js"]
+    "setupFiles": [
+      "./setupTests.js"
+    ]
   }
 }
