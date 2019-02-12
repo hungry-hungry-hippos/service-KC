@@ -19,6 +19,10 @@ class GoodToKnow extends React.Component {
     this.getKnownForData(restaurantId);
   }
 
+  static getKey() {
+    return Math.random().toString(36).substr(2, 9);
+  }
+
   static getRestaurant(id) {
     return fetch(`/restaurants/${id}`).then(res => res.json());
   }
@@ -47,7 +51,7 @@ class GoodToKnow extends React.Component {
       whatToOrder = (
         restaurant.whatToOrder
           .map(item => (
-            <div key={item.name}>
+            <div key={GoodToKnow.getKey()}>
               <img src={item.icon} alt={item.name} style={{ width: '200px' }} />
               <p>{item.name}</p>
             </div>
@@ -60,7 +64,7 @@ class GoodToKnow extends React.Component {
       knownFor = (
         restaurant.knownFor
           .map(item => (
-            <div key={item.name}>
+            <div key={GoodToKnow.getKey()}>
               <img src={item.icon} alt={item.name} style={{ width: '200px' }} />
               <p>{item.name}</p>
             </div>
@@ -72,7 +76,7 @@ class GoodToKnow extends React.Component {
     if (articles) {
       articleList = (
         articles.map(article => (
-          <div key={article.name}>
+          <div key={GoodToKnow.getKey()}>
             <img src={article.image} alt={article.name} style={{ width: '200px' }} />
             <p>{article.name}</p>
           </div>

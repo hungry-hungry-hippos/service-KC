@@ -28,7 +28,7 @@ class App extends React.Component {
       <div>
         <Summary id={restaurantId} />
         <GoodToKnow id={restaurantId} />
-        {/* <Reviews /> */}
+        <Reviews id={restaurantId} />
       </div>
     );
   }
