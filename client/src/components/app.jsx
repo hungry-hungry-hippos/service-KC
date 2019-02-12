@@ -26,10 +26,9 @@ class App extends React.Component {
 
     return (
       <div>
-        <h1>GABRIEL KREUTHER</h1>
         <Summary id={restaurantId} />
-        <GoodToKnow />
-        <Reviews />
+        {/* <GoodToKnow /> */}
+        {/* <Reviews /> */}
       </div>
     );
   }

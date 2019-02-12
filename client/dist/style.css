@@ -5,6 +5,7 @@
 
 h1 {
   font-family: 'Calibre-Regular', sans-serif;
+  text-transform: uppercase;
   letter-spacing: .086em;
   font-size: 28px;
 }
