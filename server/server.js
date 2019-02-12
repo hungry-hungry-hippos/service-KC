@@ -5,10 +5,13 @@ const db = require('./db/db.js');
 
 const app = express();
 const port = process.env.PORT || 3040;
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
+// Potential optimization:
+// Instead of serving website that triggers API calls, send data long with it
 app.use(morgan('default'));
 
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
+
+app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
 app.get('/restaurants/:id', (req, res) => {
   db.getRestaurant(req.params.id, (err, data) => {
@@ -30,3 +33,6 @@ app.get('/reviews/:id', (req, res) => {
     res.send(data);
   });
 });
+
+// Catch all to show restaurant page
+app.use('*', express.static(path.join(__dirname, '..', 'client', 'dist')));
