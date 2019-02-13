@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helpers from '../../utils/helpers';
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -15,10 +16,6 @@ class Reviews extends React.Component {
   componentDidMount() {
     const { restaurantId } = this.state;
     this.getReviews(restaurantId);
-  }
-
-  static getKey() {
-    return Math.random().toString(36).substr(2, 9);
   }
 
   getReviews(id) {
@@ -38,7 +35,7 @@ class Reviews extends React.Component {
     if (reviews.length) {
       reviewList = (
         reviews.map(review => (
-          <div key={Reviews.getKey()}>
+          <div key={Helpers.getKey()}>
             <img src={review.image} alt={review.name} style={{ width: '200px' }} />
             <h3>{review.name}</h3>
             <h4>{review.date}</h4>

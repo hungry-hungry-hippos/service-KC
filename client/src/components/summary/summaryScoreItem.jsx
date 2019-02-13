@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ScoreElement = (props) => {
+const ScoreItem = (props) => {
   const { scoreKey, value } = props;
 
   const scoreDiv = (
@@ -12,4 +12,4 @@ const ScoreElement = (props) => {
   return scoreDiv;
 };
 
-export default ScoreElement;
+export default ScoreItem;

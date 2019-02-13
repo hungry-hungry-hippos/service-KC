@@ -1,7 +1,7 @@
 import React from 'react';
-import Summary from './summary';
-import GoodToKnow from './goodToKnow';
-import Reviews from './reviews';
+import Summary from './summary/summary';
+import GoodToKnow from './gtk/goodToKnow';
+import Reviews from './reviews/reviews';
 
 class App extends React.Component {
   constructor(props) {
