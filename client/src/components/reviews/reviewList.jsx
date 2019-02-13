@@ -9,7 +9,7 @@ const ReviewList = (props) => {
   if (reviews && reviews.length) {
     reviewList = (
       <div id="ReviewList">
-        <h2>Reviews</h2>
+        <h3>Google Reviews</h3>
         {reviews.map(review => (
           <ReviewItem review={review} key={Helpers.getKey()} />
         ))}

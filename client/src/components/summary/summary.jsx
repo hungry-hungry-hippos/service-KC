@@ -36,7 +36,6 @@ class Summary extends React.Component {
 
     return (
       <div id="summary">
-        <h2>Summary</h2>
         <h1>{restaurant.name}</h1>
         <p>{restaurant.headline}</p>
         <TagList id={restaurant.restaurantId} tags={restaurant.tags} />

@@ -51,7 +51,6 @@ class GoodToKnow extends React.Component {
 
     return (
       <div id="goodtoknow">
-        <h2>Good To Know</h2>
         <GTKOrderList whatToOrder={restaurant.whatToOrder} />
         <GTKInsiderTip tip={restaurant.insiderTip} />
         <GTKKnownList knownFor={restaurant.knownFor} />
