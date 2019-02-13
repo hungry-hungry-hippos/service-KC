@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helpers from '../../utils/helpers';
+import ReviewList from './reviewList';
 
 class Reviews extends React.Component {
   constructor(props) {
@@ -31,27 +31,9 @@ class Reviews extends React.Component {
   render() {
     const { reviews } = this.state;
 
-    let reviewList = '';
-    if (reviews.length) {
-      reviewList = (
-        reviews.map(review => (
-          <div key={Helpers.getKey()}>
-            <img src={review.image} alt={review.name} style={{ width: '200px' }} />
-            <h3>{review.name}</h3>
-            <h4>{review.date}</h4>
-            <p>
-              <span>{review.stars}</span>
-              {` ${review.description}`}
-            </p>
-          </div>
-        ))
-      );
-    }
-
     return (
       <div id="reviews">
-        <h2>Reviews</h2>
-        {reviewList}
+        <ReviewList reviews={reviews} />
       </div>
     );
   }

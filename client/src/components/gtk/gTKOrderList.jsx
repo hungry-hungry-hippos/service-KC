@@ -19,9 +19,7 @@ const GTKOrderList = (props) => {
     );
   }
 
-  return (
-    orderList
-  );
+  return orderList;
 };
 
 export default GTKOrderList;
