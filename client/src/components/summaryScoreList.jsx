@@ -1,4 +1,5 @@
 import React from 'react';
+import ScoreElement from './summaryScore';
 
 const Scores = (props) => {
   const { scores } = props;
@@ -9,10 +10,8 @@ const Scores = (props) => {
       <div id="summaryScores">
         {
           Object.keys(scores)
-            .map(key => (
-              <p key={key}>
-                {`${key} : ${scores[key]}`}
-              </p>
+            .map(scoreKey => (
+              <ScoreElement scoreKey={scoreKey} value={scores[scoreKey]} key={scoreKey} />
             ))
         }
       </div>
