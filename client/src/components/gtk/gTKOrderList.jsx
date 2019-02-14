@@ -9,7 +9,7 @@ const GTKOrderList = (props) => {
   if (whatToOrder && whatToOrder.length) {
     orderList = (
       <div id="GTKOrderList">
-        <h3>What To Order</h3>
+        <h3 className="SectionHeader">What To Order</h3>
         {whatToOrder
           .map(item => (
             <GTKOrderItem item={item} key={Helpers.getKey()} />

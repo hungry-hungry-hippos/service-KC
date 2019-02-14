@@ -34,7 +34,7 @@ h2 {
   padding-top: 2px;
 }
 
-h3 {
+.SectionHeader {
   font: 16px/24px 'Calibre-Semibold';
   letter-spacing: 0.086em;
   text-transform: uppercase;
@@ -42,7 +42,7 @@ h3 {
   margin: 0;
 }
 
-#summary, #goodtoknow, #reviews {
+#summary, #goodToKnow, #reviews {
   background-color: white;
   margin-top: 40px;
   margin-right: 40px;
@@ -100,7 +100,7 @@ h3 {
   border-bottom: 1px #d0d2d3 solid;
 }
 
-.scoreDiv {
+.ScoreDiv {
   display: inline-block;
   width: 130px;
   height: 60px;
@@ -108,16 +108,16 @@ h3 {
   border-right: 1px #d0d2d3 solid;
 }
 
-.scoreDiv:last-child {
+.ScoreDiv:last-child {
   border-right: none;
 }
 
-.scoreRating {
+.ScoreRating {
   font: 36px/44px 'Calibre-Medium';
   letter-spacing: 0.086em;
 }
 
-.scoreLabel {
+.ScoreLabel {
   font: 13px/18px 'Calibre-Regular';
   letter-spacing: 0.061em;
   text-transform: uppercase;

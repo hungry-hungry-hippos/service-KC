@@ -8,9 +8,9 @@ const ReviewList = (props) => {
   let reviewList = '';
   if (reviews && reviews.length) {
     reviewList = (
-      <div id="ReviewList">
-        <h3>Google Reviews</h3>
-        <div>{overall}</div>
+      <div id="reviewList">
+        <h3 className="SectionHeader">Google Reviews</h3>
+        <div id="overallReviewScore">{overall}</div>
         {reviews.map(review => (
           <ReviewItem review={review} key={Helpers.getKey()} />
         ))}
