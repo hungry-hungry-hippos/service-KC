@@ -12,19 +12,15 @@ describe('DB Data Retrieval', () => {
     });
   });
 
-  // Note: on data regeneration, tests need to be rewritten
-  // Alternatively: maybe look into snapshot tests
   test('Should return article information', (done) => {
-    db.getArticles(4, (err, data) => {
-      expect(data.length).toBe(4);
-      data.forEach(article => expect(article.restaurantIds).toContain(4));
+    db.getArticles(1, (err, data) => {
+      expect(data.length).toBe(8);
+      data.forEach(article => expect(article.restaurantIds).toContain(1));
 
       done();
     });
   });
 
-  // Note: on data regeneration, tests need to be rewritten
-  // Alternatively: maybe look into snapshot tests
   test('Should return review information', (done) => {
     db.getReviews(1, (err, data) => {
       expect(data.length).toBe(14);
