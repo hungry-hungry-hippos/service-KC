@@ -9,11 +9,18 @@ const ReviewList = (props) => {
   if (reviews && reviews.length) {
     reviewList = (
       <div id="reviewList">
-        <h3 className="SectionHeader">Google Reviews</h3>
-        <div id="overallReviewScore">{overall}</div>
-        {reviews.map(review => (
-          <ReviewItem review={review} key={Helpers.getKey()} />
-        ))}
+        <div className="SectionHeader ReviewsHeader">
+          <div id="reviewTitle">Google Reviews</div>
+          <div id="overallReviewScore">
+            {`${overall} `}
+            <span className="starRating">★★★★★</span>
+          </div>
+        </div>
+        <div id="reviewItems">
+          {reviews.map(review => (
+            <ReviewItem review={review} key={Helpers.getKey()} />
+          ))}
+        </div>
       </div>
     );
   }
