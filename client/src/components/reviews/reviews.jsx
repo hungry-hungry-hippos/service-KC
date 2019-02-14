@@ -9,6 +9,7 @@ class Reviews extends React.Component {
 
     this.state = {
       restaurantId: id,
+      overall: 3.7,
       reviews: {},
     };
   }
@@ -29,11 +30,11 @@ class Reviews extends React.Component {
   }
 
   render() {
-    const { reviews } = this.state;
+    const { overall, reviews } = this.state;
 
     return (
       <div id="reviews">
-        <ReviewList reviews={reviews} />
+        <ReviewList overall={overall} reviews={reviews} />
       </div>
     );
   }
