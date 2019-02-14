@@ -559,7 +559,7 @@ const generateKnownFor = () => {
     },
   ];
 
-  const numberKnowns = randIdx(5) + 1;
+  const numberKnowns = randIdx(7) + 1;
   const knownFor = [];
   for (let i = 0; i < numberKnowns; i += 1) {
     knownFor.push(knowns[randIdx(knowns.length)]);
