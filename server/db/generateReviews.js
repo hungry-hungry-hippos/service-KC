@@ -118,7 +118,7 @@ db.once('open', () => {
   const reviews = [];
   let numReviews;
   for (let i = 1; i <= 100; i += 1) {
-    numReviews = randIdx(15) + 1;
+    numReviews = i === 1 ? 14 : randIdx(15) + 1;
     while (numReviews > 0) {
       reviews.push(generateReview(i));
       numReviews -= 1;

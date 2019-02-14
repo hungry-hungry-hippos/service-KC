@@ -9,7 +9,7 @@ const generateRestaurants = () => {
   const linked = randIdx(8) + 1;
   const restaurants = [];
   while (restaurants.length < linked) {
-    restaurants.push(randIdx(100) + 1);
+    restaurants.push(randIdx(99) + 2);
   }
   return restaurants;
 };
@@ -65,6 +65,10 @@ db.once('open', () => {
 
   while (articles.length < 20) {
     articles.push(generateArticle());
+  }
+
+  for (let i = 0; i < 8; i += 1) {
+    articles[i].restaurantIds.push(1);
   }
 
   // Insert data
