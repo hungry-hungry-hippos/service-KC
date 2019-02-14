@@ -4,7 +4,7 @@ const ReviewItem = (props) => {
   const { review } = props;
 
   const reviewDiv = (
-    <div name="ReviewItem">
+    <div className="ReviewItem">
       <img src={review.image} alt={review.name} style={{ width: '200px' }} />
       <h3>{review.name}</h3>
       <h4>{review.date}</h4>

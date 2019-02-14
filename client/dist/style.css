@@ -1,11 +1,124 @@
 @font-face {
   font-family: 'Calibre-Regular';
-  src: url('/assets/CalibreWeb-Regular.woff2') format('woff2');
+  src: url('/assets/CalibreWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Calibre-Medium';
+  src: url('/assets/CalibreWeb-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Calibre-Semibold';
+  src: url('/assets/CalibreWeb-Semibold.woff') format('woff');
+}
+
+body {
+  background-color: #f1f1f2;
+  margin: 0;
 }
 
 h1 {
-  font-family: 'Calibre-Regular', sans-serif;
-  text-transform: uppercase;
+  font: 36px/44px 'Calibre-Medium';
   letter-spacing: .086em;
-  font-size: 28px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 20px;
+}
+
+h2 {
+  font: 15px/24px 'Calibre-Regular';
+  letter-spacing: 0.013em;
+  color: #656666;
+  margin: 0;
+  padding-top: 2px;
+}
+
+h3 {
+  font: 16px/24px 'Calibre-Semibold';
+  letter-spacing: 0.086em;
+  text-transform: uppercase;
+  color: #656666;
+  margin: 0;
+}
+
+#summary, #goodtoknow, #reviews {
+  background-color: white;
+  margin-top: 40px;
+  margin-right: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+#summaryTags a {
+  font: 15px/24px 'Calibre-Regular';
+  letter-spacing: 0.013em;
+  color: #656666;
+  padding-top: 3px;
+  text-decoration: none;
+  border-bottom: 1px #656666 solid;
+}
+
+#summaryTags a:hover {
+  border-color: #b70038;
+  color: #b70038;
+}
+
+#summaryDivider {
+  border-top: 1px #656666 solid;
+  border-bottom: 1px #656666 solid;
+  height: 2px;
+  margin: 23px 0 17px;
+}
+
+#summaryLogo {
+  border: 2px white solid;
+  border-radius: 16px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: 83.3%;
+}
+
+#summaryZReview > p {
+  font: 22px/32px 'Calibre-Regular';
+  letter-spacing: 0.004em;
+  color: #101820;
+  margin-top: 21px;
+  margin-bottom: 0;
+}
+
+#summaryZReview b {
+  font-family: 'Calibre-Semibold';
+  font-weight: normal;
+}
+
+#summaryScores {
+  display: inline-block;
+  margin-top: 17px;
+  padding-bottom: 16px;
+  border-bottom: 1px #d0d2d3 solid;
+}
+
+.scoreDiv {
+  display: inline-block;
+  width: 130px;
+  height: 60px;
+  text-align: center;
+  border-right: 1px #d0d2d3 solid;
+}
+
+.scoreDiv:last-child {
+  border-right: none;
+}
+
+.scoreRating {
+  font: 36px/44px 'Calibre-Medium';
+  letter-spacing: 0.086em;
+}
+
+.scoreLabel {
+  font: 13px/18px 'Calibre-Regular';
+  letter-spacing: 0.061em;
+  text-transform: uppercase;
 }

@@ -4,9 +4,12 @@ const ScoreItem = (props) => {
   const { scoreKey, value } = props;
 
   const scoreDiv = (
-    <p id={`score-${scoreKey}`}>
-      {`${scoreKey} : ${value}`}
-    </p>
+    <div className="scoreDiv">
+      <div className="scoreRating">
+        {value.toFixed(1)}
+      </div>
+      <span className="scoreLabel">{scoreKey}</span>
+    </div>
   );
 
   return scoreDiv;

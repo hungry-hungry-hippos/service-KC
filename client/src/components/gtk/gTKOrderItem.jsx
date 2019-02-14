@@ -4,7 +4,7 @@ const GTKOrderItem = (props) => {
   const { item } = props;
 
   const orderDiv = (
-    <div name="GTKOrderItem">
+    <div className="GTKOrderItem">
       <img src={item.icon} alt={item.name} style={{ width: '200px' }} />
       <p>{item.name}</p>
     </div>

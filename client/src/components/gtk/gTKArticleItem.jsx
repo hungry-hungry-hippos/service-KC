@@ -4,7 +4,7 @@ const GTKArticleItem = (props) => {
   const { article } = props;
 
   const articleDiv = (
-    <div name="GTKArticleItem">
+    <div className="GTKArticleItem">
       <img src={article.image} alt={article.name} style={{ width: '200px' }} />
       <p>{article.name}</p>
     </div>
