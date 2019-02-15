@@ -172,6 +172,32 @@ h2 {
   position: absolute;
 }
 
+.GTKInsiderTipContent {
+  text-align: center;
+}
+
+.TipTopDivider {
+  width: 30%;
+  border: 1px #d0d2d3 solid;
+  margin: 25px auto 0 auto;
+  text-align: center;
+}
+
+.TipText {
+  font: 22px/32px 'Calibre-Regular';
+  letter-spacing: 0.004em;
+  width: 75%;
+  margin-top: 23px;
+  display: inline-block;
+}
+
+.TipBottomDivider {
+  width: 30%;
+  border: 1px #d0d2d3 solid;
+  margin: 23px auto 0 auto;
+  text-align: center;
+}
+
 /* Reviews style */
 #reviewItems {
   display: flex;

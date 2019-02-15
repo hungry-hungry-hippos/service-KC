@@ -8,7 +8,11 @@ const GTKInsiderTip = (props) => {
     tipDiv = (
       <div id="GTKInsiderTip">
         <div className="SectionHeader GTKHeader">Insider Tip</div>
-        <div>{tip}</div>
+        <div className="GTKInsiderTipContent">
+          <div className="TipTopDivider" />
+          <div className="TipText">{tip}</div>
+          <div className="TipBottomDivider" />
+        </div>
       </div>
     );
   }
