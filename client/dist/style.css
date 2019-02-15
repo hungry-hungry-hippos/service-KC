@@ -144,6 +144,35 @@ h2 {
   text-transform: uppercase;
 }
 
+/* GTK style */
+.GTKOrderItem {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-right: 16px;
+  width: 33.33%;
+}
+
+.GTKOrderItemImage {
+  background-size: cover;
+  height: 176px;
+  width: 100%;
+  position: relative;
+}
+
+.GTKOrderItemText {
+  font: 24px/24px 'Calibre-Medium';
+  letter-spacing: 0.004em;
+  color: white;
+  margin: 16px;
+  max-height: 72px;
+  max-width: calc(100% - 32px);
+  overflow: hidden;
+  bottom: 0;
+  position: absolute;
+}
+
+/* Reviews style */
 #reviewItems {
   display: flex;
   flex-direction: column;

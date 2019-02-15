@@ -9,9 +9,9 @@ const GTKArticleList = (props) => {
   if (articles && articles.length) {
     articleList = (
       <div id="GTKArticleList">
-        <h3 className="SectionHeader GTKHeader">
+        <div className="SectionHeader GTKHeader">
           {`Zagat Mentions Of ${name}`}
-        </h3>
+        </div>
         {articles.map(article => (
           <GTKArticleItem article={article} key={Helpers.getKey()} />
         ))}

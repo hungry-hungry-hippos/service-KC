@@ -9,7 +9,7 @@ class Reviews extends React.Component {
 
     this.state = {
       restaurantId: id,
-      overall: 3.7,
+      overall: 3,
       reviews: {},
     };
   }

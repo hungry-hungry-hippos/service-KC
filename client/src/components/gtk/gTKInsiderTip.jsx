@@ -7,7 +7,7 @@ const GTKInsiderTip = (props) => {
   if (tip) {
     tipDiv = (
       <div id="GTKInsiderTip">
-        <h3 className="SectionHeader GTKHeader">Insider Tip</h3>
+        <div className="SectionHeader GTKHeader">Insider Tip</div>
         <div>{tip}</div>
       </div>
     );

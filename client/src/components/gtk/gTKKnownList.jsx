@@ -9,7 +9,7 @@ const GTKKnownList = (props) => {
   if (knownFor && knownFor.length) {
     knownList = (
       <div id="GTKKnownList">
-        <h3 className="SectionHeader GTKHeader">Known For</h3>
+        <div className="SectionHeader GTKHeader">Known For</div>
         {knownFor.map(item => (
           <GTKKnownItem item={item} key={Helpers.getKey()} />
         ))}

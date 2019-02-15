@@ -12,7 +12,7 @@ const ZReview = (props) => {
         <div id="summaryDivider">
           <img src="https://zagat.com/assets/img/z-logo-icon-red.svg" alt="logo" id="summaryLogo" />
         </div>
-        <h3 className="SectionHeader">The Zagat Review</h3>
+        <div className="SectionHeader">The Zagat Review</div>
         <Scores scores={scores} />
         <p dangerouslySetInnerHTML={{ __html: description }} />
       </div>

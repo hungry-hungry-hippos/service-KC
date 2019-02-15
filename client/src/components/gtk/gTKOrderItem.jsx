@@ -5,8 +5,9 @@ const GTKOrderItem = (props) => {
 
   const orderDiv = (
     <div className="GTKOrderItem">
-      <img src={item.icon} alt={item.name} style={{ width: '200px' }} />
-      <p>{item.name}</p>
+      <div className="GTKOrderItemImage" style={{ backgroundImage: `url(${item.icon})` }}>
+        <span className="GTKOrderItemText">{item.name}</span>
+      </div>
     </div>
   );
 

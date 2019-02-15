@@ -12,7 +12,7 @@ const ReviewList = (props) => {
         <div className="SectionHeader ReviewsHeader">
           <div id="reviewTitle">Google Reviews</div>
           <div id="overallReviewScore">
-            {`${overall} `}
+            {`${overall.toFixed(1)} `}
             <span className="starRating">★★★★★</span>
           </div>
         </div>
