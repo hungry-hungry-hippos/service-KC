@@ -263,6 +263,34 @@ h2 {
   text-overflow: ellipsis;
 }
 
+#GTKShowMore {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#GTKShowMoreButton {
+  display: inline-block;
+  height: 40px;
+  width: 192px;
+  text-align: center;
+  color: #b70038;
+  font: 16px/24px 'Calibre-Medium';
+  letter-spacing: 0.086em;
+  text-transform: uppercase;
+  background: none;
+  border: 2px #b70038 solid;
+  cursor: pointer;
+}
+
+#GTKShowMoreButton:hover {
+  color: white;
+  background-color: #b70038;
+}
+
+#GTKShowMoreButton:focus {
+  outline: none;
+}
+
 /* Reviews style */
 #reviewItems {
   display: flex;

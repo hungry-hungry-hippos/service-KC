@@ -7,18 +7,15 @@ class Summary extends React.Component {
   constructor(props) {
     super(props);
 
-    const { id } = props;
-
     this.state = {
-      restaurantId: id,
       restaurant: {},
     };
   }
 
   componentDidMount() {
-    const { restaurantId } = this.state;
+    const { id } = this.props;
 
-    this.getRestaurant(restaurantId);
+    this.getRestaurant(id);
   }
 
   getRestaurant(id) {

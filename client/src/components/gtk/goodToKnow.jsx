@@ -9,18 +9,15 @@ class GoodToKnow extends React.Component {
   constructor(props) {
     super(props);
 
-    const { id } = props;
-
     this.state = {
-      restaurantId: id,
       restaurant: {},
       articles: [],
     };
   }
 
   componentDidMount() {
-    const { restaurantId } = this.state;
-    this.getKnownForData(restaurantId);
+    const { id } = this.props;
+    this.getKnownForData(id);
   }
 
   static getRestaurant(id) {
@@ -54,7 +51,7 @@ class GoodToKnow extends React.Component {
         <GTKOrderList whatToOrder={restaurant.whatToOrder} />
         <GTKInsiderTip tip={restaurant.insiderTip} />
         <GTKKnownList knownFor={restaurant.knownFor} />
-        <GTKArticleList name={restaurant.name} id={restaurant.restaurantId} articles={articles} />
+        {articles.length ? <GTKArticleList name={restaurant.name} id={restaurant.restaurantId} articles={articles} /> : ''}
       </div>
     );
   }

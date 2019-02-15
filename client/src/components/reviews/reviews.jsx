@@ -5,18 +5,16 @@ import ReviewList from './reviewList';
 class Reviews extends React.Component {
   constructor(props) {
     super(props);
-    const { id } = props;
 
     this.state = {
-      restaurantId: id,
       overall: '3',
       reviews: {},
     };
   }
 
   componentDidMount() {
-    const { restaurantId } = this.state;
-    this.getReviews(restaurantId);
+    const { id } = this.props;
+    this.getReviews(id);
   }
 
   getReviews(id) {

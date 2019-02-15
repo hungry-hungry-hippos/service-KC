@@ -7,8 +7,8 @@ class ReviewItem extends React.Component {
     super(props);
 
     const { review } = props;
+
     this.state = {
-      review,
       dispDescription: review.description,
     };
 
@@ -20,7 +20,8 @@ class ReviewItem extends React.Component {
   }
 
   toggleDescription() {
-    const { review, dispDescription } = this.state;
+    const { review } = this.props;
+    const { dispDescription } = this.state;
 
     if (review.description.length > 250) {
       if (dispDescription === review.description) {
@@ -42,7 +43,8 @@ class ReviewItem extends React.Component {
   }
 
   render() {
-    const { review, dispDescription } = this.state;
+    const { review } = this.props;
+    const { dispDescription } = this.state;
 
     const reviewDiv = (
       <div className="ReviewItem">
