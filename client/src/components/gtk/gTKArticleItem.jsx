@@ -1,12 +1,14 @@
 import React from 'react';
 
 const GTKArticleItem = (props) => {
-  const { article } = props;
+  const { article, id } = props;
 
   const articleDiv = (
     <div className="GTKArticleItem">
-      <img src={article.image} alt={article.name} style={{ width: '200px' }} />
-      <p>{article.name}</p>
+      <a href={`/${id}`}>
+        <div className="GTKArticleImage" style={{ backgroundImage: `url(${article.image})` }} />
+        <div className="GTKArticleText">{article.name}</div>
+      </a>
     </div>
   );
 
