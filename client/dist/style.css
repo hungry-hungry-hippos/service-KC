@@ -236,6 +236,10 @@ h2 {
   cursor: pointer;
 }
 
+.GTKArticleItem:focus {
+  outline: none;
+}
+
 .GTKArticleItem:last-child, .GTKArticleItem:nth-last-child(2) {
   margin-bottom: 0;
 }

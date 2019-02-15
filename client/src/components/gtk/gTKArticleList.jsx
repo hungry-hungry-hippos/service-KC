@@ -44,8 +44,7 @@ class GTKArticleList extends React.Component {
                 {showLength === articles.length ? 'Show Less' : `Show All (${articles.length})`}
               </button>
             </div>
-          ) : ''
-}
+          ) : ''}
         </div>
       );
     }
