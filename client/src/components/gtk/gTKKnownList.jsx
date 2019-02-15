@@ -10,9 +10,11 @@ const GTKKnownList = (props) => {
     knownList = (
       <div id="GTKKnownList">
         <div className="SectionHeader GTKHeader">Known For</div>
-        {knownFor.map(item => (
-          <GTKKnownItem item={item} key={Helpers.getKey()} />
-        ))}
+        <div id="GTKKnownItems">
+          {knownFor.map(item => (
+            <GTKKnownItem item={item} key={Helpers.getKey()} />
+          ))}
+        </div>
       </div>
     );
   }

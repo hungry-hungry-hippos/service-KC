@@ -5,8 +5,8 @@ const GTKKnownItem = (props) => {
 
   const knownItemDiv = (
     <div className="GTKKnownItem">
-      <img src={item.icon} alt={item.name} style={{ width: '200px' }} />
-      <p>{item.name}</p>
+      <img src={item.icon} alt={item.name} />
+      <div className="GTKKnownItemText">{item.name}</div>
     </div>
   );
 
