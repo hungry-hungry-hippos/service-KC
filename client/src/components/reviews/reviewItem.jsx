@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from './starRating';
 
 const ReviewItem = (props) => {
   const { review } = props;
@@ -14,9 +15,8 @@ const ReviewItem = (props) => {
         <div className="ReviewName">{review.name}</div>
         <div className="ReviewDate">{review.date}</div>
         <div className="Review">
-          {/* <span>{review.stars}</span> */}
-          <span className="starRating">★★★★★</span>
-          {` ${review.description}`}
+          <StarRating stars={review.stars} />
+          <span className="ReviewText">{` ${review.description}`}</span>
         </div>
       </div>
     </div>

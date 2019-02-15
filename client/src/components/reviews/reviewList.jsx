@@ -1,6 +1,7 @@
 import React from 'react';
 import Helpers from '../../utils/helpers';
 import ReviewItem from './reviewItem';
+import StarRating from './starRating';
 
 const ReviewList = (props) => {
   const { overall, reviews } = props;
@@ -12,8 +13,8 @@ const ReviewList = (props) => {
         <div className="SectionHeader ReviewsHeader">
           <div id="reviewTitle">Google Reviews</div>
           <div id="overallReviewScore">
-            {`${overall.toFixed(1)} `}
-            <span className="starRating">★★★★★</span>
+            {`${parseFloat(overall).toFixed(1)} `}
+            <StarRating stars={overall} />
           </div>
         </div>
         <div id="reviewItems">

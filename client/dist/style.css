@@ -311,3 +311,23 @@ h2 {
   max-width: 75%;
   max-height: none;
 }
+
+.StarRating {
+  letter-spacing: 0.14em;
+  display: inline-block;
+  height: 20px;
+}
+
+.StarContainer {
+  position: relative;
+}
+
+.StarBackground {
+  opacity: 0.2;
+}
+
+.StarFilled {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
