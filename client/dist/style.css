@@ -284,6 +284,17 @@ h2 {
   padding-bottom: 0;
 }
 
+.ReviewContent {
+  display: block;
+  flex: 1 1 100%;
+  max-width: 75%;
+  max-height: none;
+}
+
+.ReviewContent:focus {
+  outline: none;
+}
+
 .ReviewPhoto {
   display: block;
   flex: 1 1 100%;
@@ -305,13 +316,6 @@ h2 {
   color: #656666;
 }
 
-.ReviewContent {
-  display: block;
-  flex: 1 1 100%;
-  max-width: 75%;
-  max-height: none;
-}
-
 .StarRating {
   letter-spacing: 0.14em;
   display: inline-block;
@@ -330,4 +334,8 @@ h2 {
   position: absolute;
   overflow: hidden;
   top: 0;
+}
+
+.SeeMore {
+  color: #9b9b9b;
 }
