@@ -233,12 +233,7 @@ h2 {
   flex-direction: row;
   width: 50%;
   margin-bottom: 40px;
-  position: relative;
-}
-
-.GTKArticleItem a {
-  color: #101820;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .GTKArticleImage {
@@ -249,14 +244,20 @@ h2 {
   height: 120px;
 }
 
-.GTKArticleText {
-  display: inline-block;
+.GTKArticleTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: calc(100% - 120px);
+  height: 120px;
   padding: 22px 14px 26px;
   box-sizing: border-box;
-  width: calc(100% - 120px);
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+}
+
+.GTKArticleText {
+  /* max-height: 50px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Reviews style */
