@@ -228,7 +228,7 @@ h2 {
 }
 
 .GTKArticleItem {
-  font: 19px/23px 'Calibre-Medium';
+  font: 19px/24px 'Calibre-Medium';
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -244,12 +244,25 @@ h2 {
   margin-bottom: 0;
 }
 
-.GTKArticleImage {
+.GTKArticleImageContainer {
   display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(16, 24, 32, 1);
+}
+
+.GTKArticleImage {
   background-size: cover;
   background-position: center;
   width: 120px;
   height: 120px;
+  transition: transform .3s cubic-bezier(0.645,0.045,0.355,1.000),background-size .3s cubic-bezier(0.645,-7.955,0.355,1.000),
+  opacity .3s cubic-bezier(0.645,0.045,0.355,1.000),background-position .3s cubic-bezier(0.645,0.045,0.355,1.000);
+}
+
+.GTKArticleItem:hover .GTKArticleImage {
+  transform: scale(1.01);
+  opacity: 0.92;
 }
 
 .GTKArticleTextContainer {
@@ -265,6 +278,15 @@ h2 {
 .GTKArticleText {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.GTKArticleSpan {
+  border-bottom: 1px transparent solid;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.GTKArticleItem:hover .GTKArticleSpan {
+  border-bottom: 1px #b70038 solid;
 }
 
 #GTKShowMore {

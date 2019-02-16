@@ -5,10 +5,12 @@ const GTKArticleItem = (props) => {
 
   const articleDiv = (
     <div className="GTKArticleItem" onClick={() => (window.location.replace(`/${id}`))} onKeyPress={() => (window.location.replace(`/${id}`))} tabIndex={0} role="button">
-      <div className="GTKArticleImage" style={{ backgroundImage: `url(${article.image})` }} />
+      <div className="GTKArticleImageContainer">
+        <div className="GTKArticleImage" style={{ backgroundImage: `url(${article.image})` }} />
+      </div>
       <div className="GTKArticleTextContainer">
         <div className="GTKArticleText">
-          {article.name}
+          <span className="GTKArticleSpan">{article.name}</span>
         </div>
       </div>
     </div>
