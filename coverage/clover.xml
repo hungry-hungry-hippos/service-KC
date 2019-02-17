@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1550377842472" clover="3.2.0">
-  <project timestamp="1550377842472" name="All files">
-    <metrics statements="175" coveredstatements="121" conditionals="52" coveredconditionals="25" methods="59" coveredmethods="36" elements="286" coveredelements="182" complexity="0" loc="175" ncloc="175" packages="6" files="21" classes="21"/>
+<coverage generated="1550384321275" clover="3.2.0">
+  <project timestamp="1550384321276" name="All files">
+    <metrics statements="175" coveredstatements="171" conditionals="52" coveredconditionals="44" methods="59" coveredmethods="57" elements="286" coveredelements="272" complexity="0" loc="175" ncloc="175" packages="6" files="21" classes="21"/>
     <package name="client.src.components">
       <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="app.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/app.jsx">
@@ -18,88 +18,88 @@
       </file>
     </package>
     <package name="client.src.components.gtk">
-      <metrics statements="58" coveredstatements="8" conditionals="22" coveredconditionals="0" methods="23" coveredmethods="0"/>
+      <metrics statements="58" coveredstatements="58" conditionals="22" coveredconditionals="19" methods="23" coveredmethods="21"/>
       <file name="gTKArticleItem.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKArticleItem.jsx">
-        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
       </file>
       <file name="gTKArticleList.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKArticleList.jsx">
-        <metrics statements="14" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
+        <metrics statements="14" coveredstatements="14" conditionals="10" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
       </file>
       <file name="gTKInsiderTip.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKInsiderTip.jsx">
-        <metrics statements="6" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
       <file name="gTKKnownItem.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKKnownItem.jsx">
-        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
       <file name="gTKKnownList.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKKnownList.jsx">
-        <metrics statements="7" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
       </file>
       <file name="gTKOrderItem.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKOrderItem.jsx">
-        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="gTKOrderList.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/gTKOrderList.jsx">
-        <metrics statements="7" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
       </file>
       <file name="goodToKnow.jsx" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/components/gtk/goodToKnow.jsx">
-        <metrics statements="12" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="0"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="49" count="7" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
       </file>
     </package>
     <package name="client.src.components.reviews">
@@ -216,7 +216,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="helpers.js" path="/Users/Kheng/Dropbox/Backup/Hack Reactor/Hungry Hungry Hippos/service-KC/client/src/utils/helpers.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="4" type="stmt"/>
+        <line num="3" count="14" type="stmt"/>
       </file>
     </package>
     <package name="server.db">
