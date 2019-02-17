@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">12.5% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/8</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -74,53 +74,53 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 &nbsp;
-const TagList = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
-  const { id, tags } = <span class="cstat-no" title="statement not covered" >props;</span>
+const TagList = (props) =&gt; {
+  const { id, tags } = props;
 &nbsp;
-  let tagsDiv = <span class="cstat-no" title="statement not covered" >'';</span>
-<span class="cstat-no" title="statement not covered" >  if (tags) {</span>
-<span class="cstat-no" title="statement not covered" >    tagsDiv = (</span>
+  let tagsDiv = '';
+  if (tags) {
+    tagsDiv = (
       &lt;div id="summaryTags"&gt;
         {
           Object.keys(tags)
-            .map(<span class="fstat-no" title="function not covered" >ke</span>y =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;a href={`/${id}`} key={key}&gt;</span>
+            .map(key =&gt; (
+              &lt;a href={`/${id}`} key={key}&gt;
                 {key === 'price' ? '$'.repeat(tags[key]) : tags[key]}
               &lt;/a&gt;
             ))
-            .reduce(<span class="fstat-no" title="function not covered" >(p</span>rev, curr) =&gt; <span class="cstat-no" title="statement not covered" >[prev, ' · ', curr])</span>
+            .reduce((prev, curr) =&gt; [prev, ' · ', curr])
         }
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return tagsDiv;</span>
+  return tagsDiv;
 };
 &nbsp;
 export default TagList;
@@ -130,7 +130,7 @@ export default TagList;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 16 2019 08:37:26 GMT-0800 (PST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 16 2019 20:30:42 GMT-0800 (PST)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

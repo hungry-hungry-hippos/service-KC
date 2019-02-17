@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme from 'enzyme';
 import TagList from './summaryTags';
 
-describe('renders correctly', () => {
+describe('Rendering', () => {
   let testData;
   let wrapper;
   let wrapperEmpty;

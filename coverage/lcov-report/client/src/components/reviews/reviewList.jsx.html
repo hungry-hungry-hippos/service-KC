@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/7</span>
+        <span class='fraction'>7/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/7</span>
+        <span class='fraction'>7/7</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -83,14 +83,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -99,14 +97,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,12 +115,12 @@ import Helpers from '../../utils/helpers';
 import ReviewItem from './reviewItem';
 import StarRating from './starRating';
 &nbsp;
-const ReviewList = <span class="fstat-no" title="function not covered" >(p</span>rops) =&gt; {
-  const { overall, reviews } = <span class="cstat-no" title="statement not covered" >props;</span>
+const ReviewList = (props) =&gt; {
+  const { overall, reviews } = props;
 &nbsp;
-  let reviewList = <span class="cstat-no" title="statement not covered" >'';</span>
-<span class="cstat-no" title="statement not covered" >  if (reviews &amp;&amp; reviews.length) {</span>
-<span class="cstat-no" title="statement not covered" >    reviewList = (</span>
+  let reviewList = '';
+  if (reviews &amp;&amp; reviews.length) {
+    reviewList = (
       &lt;div id="reviewList"&gt;
         &lt;div className="SectionHeader ReviewsHeader"&gt;
           &lt;div id="reviewTitle"&gt;Google Reviews&lt;/div&gt;
@@ -130,15 +130,15 @@ const ReviewList = <span class="fstat-no" title="function not covered" >(p</span
           &lt;/div&gt;
         &lt;/div&gt;
         &lt;div id="reviewItems"&gt;
-          {reviews.map(<span class="fstat-no" title="function not covered" >re</span>view =&gt; (
-<span class="cstat-no" title="statement not covered" >            &lt;ReviewItem review={review} key={Helpers.getKey()} /&gt;</span>
+          {reviews.map(review =&gt; (
+            &lt;ReviewItem review={review} key={Helpers.getKey()} /&gt;
           ))}
         &lt;/div&gt;
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return reviewList;</span>
+  return reviewList;
 };
 &nbsp;
 export default ReviewList;
@@ -148,7 +148,7 @@ export default ReviewList;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 16 2019 08:37:26 GMT-0800 (PST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Feb 16 2019 20:30:42 GMT-0800 (PST)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

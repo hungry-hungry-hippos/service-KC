@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme from 'enzyme';
 import Scores from './summaryScoreList';
 
-describe('renders correctly', () => {
+describe('Rendering', () => {
   let testData;
   let wrapper;
   let wrapperEmpty;

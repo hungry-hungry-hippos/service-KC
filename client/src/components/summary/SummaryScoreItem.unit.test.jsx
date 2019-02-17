@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme from 'enzyme';
 import ScoreItem from './summaryScoreItem';
 
-describe('renders correctly', () => {
+describe('Rendering', () => {
   let wrapper;
 
   beforeEach(() => {
