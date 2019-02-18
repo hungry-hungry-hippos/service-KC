@@ -10,7 +10,7 @@ const ZReview = (props) => {
     reviewDiv = (
       <div id="summaryZReview">
         <div id="summaryDivider">
-          <img src="https://zagat.com/assets/img/z-logo-icon-red.svg" alt="logo" id="summaryLogo" />
+          <img src="https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/z-logo-icon-red.svg" alt="logo" id="summaryLogo" />
         </div>
         <div className="SectionHeader">The Zagat Review</div>
         <Scores scores={scores} />

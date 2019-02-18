@@ -31,18 +31,17 @@ const generateName = () => {
 };
 
 const generateImage = () => {
-  // To do: replace links with S3 links
   const images = [
-    'https://zagat-user.imgix.net/Belcampo.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/Saru_Sushi_Cracker-Virginia_Miller.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/dirtywater1.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/list-hero-images/GettyImages-137737392.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/Octavia_SF_AubriePick_090916.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/outerlands.spencercotton..jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/MouradFamilyStyle.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/rsz_1601_bar__kitchen_desgustation_offerings.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/stonesthrowtoad_sf.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
-    'https://zagat-user.imgix.net/fogcitybrunch_sf.jpg?fit=crop&crop=center&max-h=600&max-w=600&q=75&fm=jpg&auto=format',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/Belcampo.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/GettyImages-137737392.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/MouradFamilyStyle.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/Octavia_SF_AubriePick_090916.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/Saru_Sushi_Cracker-Virginia_Miller.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/dirtywater1.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/fogcitybrunch_sf.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/outerlands.spencercotton..jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/rsz_1601_bar__kitchen_desgustation_offerings.jpg',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/stonesthrowtoad_sf.jpg',
   ];
   return images[randIdx(images.length)];
 };
