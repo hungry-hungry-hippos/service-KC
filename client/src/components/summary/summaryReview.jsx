@@ -42,7 +42,7 @@ const ZReview = (props) => {
     reviewDiv = (
       <SummaryZReview id="summaryZReview">
         <SummaryDivider id="summaryDivider">
-          <SummaryLogo src="https://zagat.com/assets/img/z-logo-icon-red.svg" alt="logo" />
+          <SummaryLogo src="https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/z-logo-icon-red.svg" alt="logo" />
         </SummaryDivider>
         <SectionHeaderDiv>The Zagat Review</SectionHeaderDiv>
         <Scores scores={scores} />
