@@ -34,7 +34,8 @@ const getReviews = (id, cb) => {
     } else {
       cb(null, data);
     }
-  });
+  })
+    .limit(5);
 };
 
 module.exports = {

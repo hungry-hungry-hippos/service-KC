@@ -515,51 +515,50 @@ const generateDescription = () => {
 };
 
 const generateKnownFor = () => {
-  // To do: replace links with S3 links
   const knowns = [
     {
       name: 'Quick bites',
-      icon: 'https://zagat.com/assets/knownfor/quick-bites.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/quick-bites.svg',
     },
     {
       name: 'Takeout',
-      icon: 'https://zagat.com/assets/knownfor/takeout.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/takeout.svg',
     },
     {
       name: 'Breakfast',
-      icon: 'https://zagat.com/assets/knownfor/breakfast.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/breakfast.svg',
     },
     {
       name: 'Lunch',
-      icon: 'https://zagat.com/assets/knownfor/lunch.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/lunch.svg',
     },
     {
       name: 'Outdoor seating',
-      icon: 'https://zagat.com/assets/knownfor/outdoor-seating.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/outdoor-seating.svg',
     },
     {
       name: 'Lively scenes',
-      icon: 'https://zagat.com/assets/knownfor/lively-scenes.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/lively-scenes.svg',
     },
     {
       name: 'After-work crowds',
-      icon: 'https://zagat.com/assets/knownfor/placeholder.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/placeholder.svg',
     },
     {
       name: 'Great beers',
-      icon: 'https://zagat.com/assets/knownfor/great-beers.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/great-beers.svg',
     },
     {
       name: 'Special occasions',
-      icon: 'https://www.zagat.com/assets/knownfor/special-occasions.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/special-occasions.svg',
     },
     {
       name: 'Online reservations',
-      icon: 'https://zagat.com/assets/knownfor/placeholder.svg',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/placeholder.svg',
     },
   ];
 
-  const numberKnowns = randIdx(5) + 1;
+  const numberKnowns = randIdx(7) + 1;
   const knownFor = [];
   for (let i = 0; i < numberKnowns; i += 1) {
     knownFor.push(knowns[randIdx(knowns.length)]);
@@ -569,31 +568,30 @@ const generateKnownFor = () => {
 };
 
 const generateOrder = () => {
-  // To do: replace links with S3 links
   const orders = [
     {
       name: 'Tuna tartare',
-      icon: 'https://storage.googleapis.com/zagat-top-places/2014-10-new-york-city/GothamBarandGrill_TunaTartare_2.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/GothamBarandGrill_TunaTartare_2.jpg',
     },
     {
       name: 'Porterhouse steak',
-      icon: 'https://storage.googleapis.com/zagat-top-places/Peter_Luger_Porterhouse._Emily_Schindler.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/Peter_Luger_Porterhouse._Emily_Schindler.jpg',
     },
     {
       name: 'Sizzling bacon',
-      icon: 'https://storage.googleapis.com/zagat-top-places/Peter_Luger_Bacon._Noah_Deveraux.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/Peter_Luger_Bacon._Noah_Deveraux.jpg',
     },
     {
       name: 'Burger',
-      icon: 'https://storage.googleapis.com/zagat-top-places/2014-10-new-york-city/PeterLuger_Burger_5.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/PeterLuger_Burger_5.jpg',
     },
     {
       name: 'Royale w/ cheese',
-      icon: 'https://storage.googleapis.com/zagat-top-places/2014-10-new-york-city/PeterLuger_Burger_5.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/PeterLuger_Burger_5.jpg',
     },
     {
       name: 'Quarter pounder w/ cheese',
-      icon: 'https://storage.googleapis.com/zagat-top-places/2014-10-new-york-city/PeterLuger_Burger_5.jpg?max-w=305&auto=format',
+      icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/whattoorder/PeterLuger_Burger_5.jpg',
     },
   ];
 
@@ -658,11 +656,11 @@ db.once('open', () => {
       knownFor: [
         {
           name: 'Dinner',
-          icon: 'https://zagat.com/assets/knownfor/placeholder.svg',
+          icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/placeholder.svg',
         },
         {
           name: 'Takeout',
-          icon: 'https://zagat.com/assets/knownfor/takeout.svg',
+          icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/takeout.svg',
         },
       ],
     },

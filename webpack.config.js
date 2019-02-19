@@ -10,6 +10,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-react', '@babel/preset-env'],
+            plugins: ['babel-plugin-styled-components'],
           },
         },
       },
@@ -19,5 +20,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/client/dist'),
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
 };

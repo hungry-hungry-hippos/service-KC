@@ -23,7 +23,7 @@ describe('DB Data Retrieval', () => {
 
   test('Should return review information', (done) => {
     db.getReviews(1, (err, data) => {
-      expect(data.length).toBe(14);
+      expect(data.length).toBe(5);
       data.forEach((review) => {
         expect(review.restaurantId).toBe(1);
         expect(Number.parseFloat(review.stars)).toBeGreaterThanOrEqual(0.5);

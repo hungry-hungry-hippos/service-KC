@@ -39,21 +39,21 @@ const generateName = () => {
 const generateImage = () => {
   // To do: replace links with S3 links
   const images = [
-    'https://lh5.googleusercontent.com/-jZCBVrHrdeY/AAAAAAAAAAI/AAAAAAAAAAA/OlSItSEoE9k/s128-c0x00000000-cc-rp-mo/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-M7caQIC3lBI/AAAAAAAAAAI/AAAAAAAApYk/Qi-Gn-9JCWM/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh5.googleusercontent.com/-b_7KOG_FH3o/AAAAAAAAAAI/AAAAAAAAAK0/ASwrkoxefD8/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh6.googleusercontent.com/-WvjDLC5nwgw/AAAAAAAAAAI/AAAAAAAAdRg/kBt10ocW8wc/s128-c0x00000000-cc-rp-mo-ba2/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh6.googleusercontent.com/-MdF87otfb4o/AAAAAAAAAAI/AAAAAAAAp-w/YpyPa47drgE/s128-c0x00000000-cc-rp-mo-ba6/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-Ab6SQAB34DQ/AAAAAAAAAAI/AAAAAAAADJs/U_viI_2rgtg/s128-c0x00000000-cc-rp-mo/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-Rg1PFsVVgjg/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbQlgBC5NRLs5vFusxxv0_xviKKKg/s128-c0x00000000-cc-rp-mo/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh6.googleusercontent.com/-PhdoB7MXoQo/AAAAAAAAAAI/AAAAAAAAIPE/hC5lXDckO-w/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh6.googleusercontent.com/-YWcsCzz9yhQ/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcaBrUwH31HSKdRBIAGeKU4Y9gKi2Q/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh4.googleusercontent.com/-3n4gMfKTd24/AAAAAAAAAAI/AAAAAAAAFDg/0bBQ86IkOcA/s128-c0x00000000-cc-rp-mo-ba5/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-wEtoE6bm1jQ/AAAAAAAAAAI/AAAAAAAA_Ks/xNordB-q3AM/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh6.googleusercontent.com/-TfirkFn_hbA/AAAAAAAAAAI/AAAAAAAAUzw/mVv55rcliUQ/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-eBnLXZtCFow/AAAAAAAAAAI/AAAAAAAAA-M/DL-gmJg0-nw/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-_7BLXG3HH7E/AAAAAAAAAAI/AAAAAAAAAUk/QyM5MXHq-4E/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
-    'https://lh3.googleusercontent.com/-4kMewEMD34w/AAAAAAAAAAI/AAAAAAAA5VU/noTNlUhmKic/s128-c0x00000000-cc-rp-mo-ba4/photo.jpg?h=72&w=72&mask=ellipse&auto=format',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo1.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo2.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo3.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo4.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo5.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo6.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo7.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo8.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo9.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo10.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo11.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo12.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo13.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo14.png',
+    'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/reviewers/photo15.png',
   ];
   return images[randIdx(images.length)];
 };

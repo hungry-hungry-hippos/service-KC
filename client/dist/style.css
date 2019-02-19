@@ -1,10 +1,20 @@
 @font-face {
   font-family: 'Calibre-Regular';
-  src: url('/assets/CalibreWeb-Regular.woff2') format('woff2');
+  src: url('/assets/CalibreWeb-Regular.woff') format('woff');
 }
 
-h1 {
-  font-family: 'Calibre-Regular', sans-serif;
-  letter-spacing: .086em;
-  font-size: 28px;
+@font-face {
+  font-family: 'Calibre-Medium';
+  src: url('/assets/CalibreWeb-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Calibre-Semibold';
+  src: url('/assets/CalibreWeb-Semibold.woff') format('woff');
+}
+
+body {
+  background-color: #f1f1f2;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
