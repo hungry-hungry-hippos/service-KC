@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ComponentDiv } from '../sharedStyledComponents';
 import GTKOrderList from './gTKOrderList';
 import GTKInsiderTip from './gTKInsiderTip';
 import GTKKnownList from './gTKKnownList';
@@ -47,12 +48,12 @@ class GoodToKnow extends React.Component {
     const { restaurant, articles } = this.state;
 
     return (
-      <div id="goodToKnow">
+      <ComponentDiv id="goodToKnow">
         <GTKOrderList whatToOrder={restaurant.whatToOrder} />
         <GTKInsiderTip tip={restaurant.insiderTip} />
         <GTKKnownList knownFor={restaurant.knownFor} />
         {articles.length ? <GTKArticleList name={restaurant.name} id={restaurant.restaurantId} articles={articles} /> : ''}
-      </div>
+      </ComponentDiv>
     );
   }
 }

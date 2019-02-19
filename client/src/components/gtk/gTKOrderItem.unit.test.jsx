@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import GTKOrderItem from './gTKOrderItem';
+import GTKOrderItem, { GTKOrderItemImage, GTKOrderItemText } from './gTKOrderItem';
 
 describe('Rendering', () => {
   let testData;
@@ -16,7 +16,7 @@ describe('Rendering', () => {
   });
 
   it('should render props correctly', () => {
-    expect(wrapper.find('.GTKOrderItemImage').render().css('background-image')).toBe(`url(${testData.icon})`);
-    expect(wrapper.find('.GTKOrderItemText').render().text()).toBe(testData.name);
+    expect(wrapper.find(GTKOrderItemImage).render().css('background-image')).toBe(`url(${testData.icon})`);
+    expect(wrapper.find(GTKOrderItemText).render().text()).toBe(testData.name);
   });
 });

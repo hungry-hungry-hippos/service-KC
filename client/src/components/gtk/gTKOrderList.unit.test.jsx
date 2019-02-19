@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
 import GTKOrderList from './gTKOrderList';
+import GTKOrderItem from './gTKOrderItem';
 
 describe('Rendering', () => {
   let testData;
@@ -24,7 +25,7 @@ describe('Rendering', () => {
   });
 
   it('should render props correctly', () => {
-    expect(wrapper.find('#GTKOrderList').render().find('.GTKOrderItem')).toHaveLength(2);
+    expect(wrapper.find('#GTKOrderList').find(GTKOrderItem)).toHaveLength(2);
   });
 
   it('should not render when no data in props', () => {

@@ -1,6 +1,8 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import GTKArticleList from './gTKArticleList';
+import { GTKHeader } from '../sharedStyledComponents';
+import GTKArticleList, { GTKArticles, GTKShowMoreButton } from './gTKArticleList';
+import GTKArticleItem from './gTKArticleItem';
 
 describe('Rendering', () => {
   let testData;
@@ -74,20 +76,26 @@ describe('Rendering', () => {
   });
 
   it('should start showing 2 articles', () => {
-    expect(wrapper.find('#GTKArticles').render().find('.GTKArticleItem')).toHaveLength(2);
+    expect(wrapper.find(GTKArticles).dive().find(GTKArticleItem)).toHaveLength(2);
   });
 
   it('should toggle long lists correctly', () => {
-    wrapper.find('#GTKShowMoreButton').simulate('click');
-    expect(wrapper.find('#GTKArticles').render().find('.GTKArticleItem')).toHaveLength(testData.articles.length);
+    wrapper.find(GTKShowMoreButton).simulate('click');
+    expect(
+      wrapper
+        .find(GTKArticles)
+        .dive()
+        .find(GTKArticleItem),
+    )
+      .toHaveLength(testData.articles.length);
   });
 
   it('should show all short lists', () => {
-    expect(wrapperShort.find('#GTKArticles').render().find('.GTKArticleItem')).toHaveLength(1);
-    expect(wrapperShort.find('#GTKShowMoreButton')).toHaveLength(0);
+    expect(wrapperShort.find(GTKArticles).dive().find(GTKArticleItem)).toHaveLength(1);
+    expect(wrapperShort.find(GTKShowMoreButton)).toHaveLength(0);
   });
 
   it('should render all remaining props correctly', () => {
-    expect(wrapper.find('.SectionHeader').render().text()).toEqual(`Zagat Mentions Of ${testData.name}`);
+    expect(wrapper.find(GTKHeader).render().text()).toEqual(`Zagat Mentions Of ${testData.name}`);
   });
 });

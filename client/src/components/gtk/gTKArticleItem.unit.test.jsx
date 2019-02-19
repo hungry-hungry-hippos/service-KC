@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import GTKArticleItem from './gTKArticleItem';
+import GTKArticleItem, { GTKArticleImage, GTKArticleSpan } from './gTKArticleItem';
 
 describe('Rendering', () => {
   let testData;
@@ -28,7 +28,7 @@ describe('Rendering', () => {
   });
 
   it('should render props correctly', () => {
-    expect(wrapper.find('.GTKArticleImage').render().css('background-image')).toEqual(`url(${testData.image})`);
-    expect(wrapper.find('.GTKArticleSpan').render().text()).toEqual(testData.name);
+    expect(wrapper.find(GTKArticleImage).render().css('background-image')).toEqual(`url(${testData.image})`);
+    expect(wrapper.find(GTKArticleSpan).render().text()).toEqual(testData.name);
   });
 });

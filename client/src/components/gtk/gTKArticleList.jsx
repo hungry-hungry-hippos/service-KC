@@ -1,7 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { GTKHeader } from '../sharedStyledComponents';
 import Helpers from '../../utils/helpers';
 import GTKArticleItem from './gTKArticleItem';
+
+export const GTKArticles = styled.div`
+  margin-top: 17px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const GTKShowMore = styled.div`
+  text-align: center;
+  margin-top: 40px;
+`;
+
+export const GTKShowMoreButton = styled.button`
+  display: inline-block;
+  height: 40px;
+  width: 192px;
+  text-align: center;
+  color: #b70038;
+  font: 16px/24px 'Calibre-Medium';
+  letter-spacing: 0.086em;
+  text-transform: uppercase;
+  background: none;
+  border: 2px #b70038 solid;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: #b70038;
+  }
+
+  &:focus {
+    outline: none;
+  }
+`;
 
 class GTKArticleList extends React.Component {
   constructor(props) {
@@ -30,20 +67,20 @@ class GTKArticleList extends React.Component {
     if (articles && articles.length) {
       articleList = (
         <div id="GTKArticleList">
-          <div className="SectionHeader GTKHeader">
+          <GTKHeader>
             {`Zagat Mentions Of ${name}`}
-          </div>
-          <div id="GTKArticles">
+          </GTKHeader>
+          <GTKArticles>
             {articles.slice(0, showLength).map(article => (
               <GTKArticleItem article={article} id={id} key={Helpers.getKey()} />
             ))}
-          </div>
+          </GTKArticles>
           {articles.length > 2 ? (
-            <div id="GTKShowMore">
-              <button type="button" onClick={this.toggleShowAll} id="GTKShowMoreButton">
+            <GTKShowMore>
+              <GTKShowMoreButton type="button" onClick={this.toggleShowAll}>
                 {showLength === articles.length ? 'Show Less' : `Show All (${articles.length})`}
-              </button>
-            </div>
+              </GTKShowMoreButton>
+            </GTKShowMore>
           ) : ''}
         </div>
       );

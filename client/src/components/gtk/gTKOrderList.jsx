@@ -1,4 +1,5 @@
 import React from 'react';
+import { GTKHeader } from '../sharedStyledComponents';
 import Helpers from '../../utils/helpers';
 import GTKOrderItem from './gTKOrderItem';
 
@@ -9,7 +10,7 @@ const GTKOrderList = (props) => {
   if (whatToOrder && whatToOrder.length) {
     orderList = (
       <div id="GTKOrderList">
-        <div className="SectionHeader GTKHeader">What To Order</div>
+        <GTKHeader>What To Order</GTKHeader>
         {whatToOrder
           .map(item => (
             <GTKOrderItem item={item} key={Helpers.getKey()} />

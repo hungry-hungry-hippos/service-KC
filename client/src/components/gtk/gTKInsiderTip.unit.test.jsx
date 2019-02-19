@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import GTKInsiderTip from './gTKInsiderTip';
+import GTKInsiderTip, { TipText } from './gTKInsiderTip';
 
 describe('Rendering', () => {
   let testData;
@@ -15,6 +15,6 @@ describe('Rendering', () => {
   });
 
   it('should render props correctly', () => {
-    expect(wrapper.find('.TipText').render().text()).toBe(testData.tip);
+    expect(wrapper.find(TipText).render().text()).toBe(testData.tip);
   });
 });

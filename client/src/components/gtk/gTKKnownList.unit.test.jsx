@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import GTKKnownList from './gTKKnownList';
+import GTKKnownList, { GTKKnownItems } from './gTKKnownList';
+import GTKKnownItem from './gTKKnownItem';
 
 describe('Rendering', () => {
   let testData;
@@ -24,7 +25,7 @@ describe('Rendering', () => {
   });
 
   it('should render props correctly', () => {
-    expect(wrapper.find('#GTKKnownItems').render().find('.GTKKnownItem')).toHaveLength(2);
+    expect(wrapper.find(GTKKnownItems).dive().find(GTKKnownItem)).toHaveLength(2);
   });
 
   it('should not render when no data in props', () => {
