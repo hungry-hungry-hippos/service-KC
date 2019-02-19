@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import ReviewItem from './reviewItem';
+import ReviewItem, { ReviewContent, ReviewDate } from './reviewItem';
 
 describe('Rendering', () => {
   let testData;
@@ -46,19 +46,19 @@ describe('Rendering', () => {
   });
 
   it('should toggle long descriptions correctly', () => {
-    wrapper.find('.ReviewContent').simulate('click');
+    wrapper.find(ReviewContent).simulate('click');
     expect(wrapper.find('.ReviewText').render().text().trim()).toBe(testData.description);
   });
 
   it('should always show short descriptions', () => {
     expect(wrapperShort.find('.ReviewText').render().text().trim()).toEqual(testDataShort.description);
-    wrapperShort.find('.ReviewContent').simulate('click');
+    wrapperShort.find(ReviewContent).simulate('click');
     expect(wrapperShort.find('.ReviewText').render().text().trim()).toEqual(testDataShort.description);
   });
 
   it('should render all remaining props correctly', () => {
     expect(wrapper.find('img').render().attr('src')).toEqual(testData.image);
     expect(wrapper.find('.ReviewName').render().text()).toEqual(testData.name);
-    expect(wrapper.find('.ReviewDate').render().text()).toEqual(testData.date);
+    expect(wrapper.find(ReviewDate).render().text()).toEqual(testData.date);
   });
 });

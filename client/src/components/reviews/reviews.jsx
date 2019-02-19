@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ComponentDiv } from '../sharedStyledComponents';
 import ReviewList from './reviewList';
 
 class Reviews extends React.Component {
@@ -31,9 +32,9 @@ class Reviews extends React.Component {
     const { overall, reviews } = this.state;
 
     return (
-      <div id="reviews">
+      <ComponentDiv id="reviews">
         <ReviewList overall={overall} reviews={reviews} />
-      </div>
+      </ComponentDiv>
     );
   }
 }

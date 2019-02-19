@@ -1,6 +1,58 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import StarRating from './starRating';
+
+export const ReviewItemDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  font: 15px/20px 'Calibre-Regular';
+  letter-spacing: 0.013em;
+  padding-top: 24px;
+  padding-bottom: 27px;
+  border-bottom: 1px #d0d2d3 solid;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+`;
+
+export const ReviewPhoto = styled.div`
+display: block;
+flex: 1 1 100%;
+max-width: 25%;
+max-height: 100%;
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: 72px;
+  width: 72px;
+}
+`;
+
+export const ReviewContent = styled.div`
+  display: block;
+  flex: 1 1 100%;
+  max-width: 75%;
+  max-height: none;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const ReviewDate = styled.div`
+  line-height: 32px;
+  color: #656666;
+`;
+
+export const SeeMore = styled.span`
+  color: #9b9b9b;
+`;
 
 class ReviewItem extends React.Component {
   constructor(props) {
@@ -47,22 +99,22 @@ class ReviewItem extends React.Component {
     const { dispDescription } = this.state;
 
     const reviewDiv = (
-      <div className="ReviewItem">
-        <div className="ReviewPhoto">
+      <ReviewItemDiv>
+        <ReviewPhoto>
           <a href={`/${review.restaurantId}`}>
             <img src={review.image} alt={review.name} />
           </a>
-        </div>
-        <div className="ReviewContent" onClick={this.toggleDescription} onKeyPress={this.toggleDescription} role="button" tabIndex={0}>
+        </ReviewPhoto>
+        <ReviewContent onClick={this.toggleDescription} onKeyPress={this.toggleDescription} role="button" tabIndex={0}>
           <div className="ReviewName">{review.name}</div>
-          <div className="ReviewDate">{review.date}</div>
+          <ReviewDate>{review.date}</ReviewDate>
           <div className="Review">
             <StarRating stars={review.stars} />
             <span className="ReviewText">{` ${dispDescription}`}</span>
-            {dispDescription === review.description ? '' : <span className="SeeMore">... See More</span>}
+            {dispDescription === review.description ? '' : <SeeMore>... See More</SeeMore>}
           </div>
-        </div>
-      </div>
+        </ReviewContent>
+      </ReviewItemDiv>
     );
 
     return reviewDiv;

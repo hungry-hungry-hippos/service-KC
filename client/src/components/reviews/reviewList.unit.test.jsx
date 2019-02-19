@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import ReviewList from './reviewList';
+import ReviewList, { OverallReviewScore, ReviewItems } from './reviewList';
+import ReviewItem from './reviewItem';
 
 describe('Rendering', () => {
   let testData;
@@ -33,8 +34,8 @@ describe('Rendering', () => {
   });
 
   it('uses the props correctly', () => {
-    expect(wrapper.find('#overallReviewScore').render().text().split(' ')[0]).toBe('3.0');
-    expect(wrapper.find('#reviewItems').render().find('.ReviewItem')).toHaveLength(2);
+    expect(wrapper.find(OverallReviewScore).render().text().split(' ')[0]).toBe('3.0');
+    expect(wrapper.find(ReviewItems).dive().find(ReviewItem)).toHaveLength(2);
   });
 
   it('should not render when no data in props', () => {
