@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import ScoreItem from './summaryScoreItem';
+import ScoreItem, { ScoreLabel, ScoreRating } from './summaryScoreItem';
 
 describe('Rendering', () => {
   let wrapper;
@@ -11,7 +11,7 @@ describe('Rendering', () => {
   });
 
   it('uses the props correctly', () => {
-    expect(wrapper.find('.ScoreLabel').render().text()).toBe('food');
-    expect(wrapper.find('.ScoreRating').render().text()).toBe('4.0');
+    expect(wrapper.find(ScoreLabel).render().text()).toBe('food');
+    expect(wrapper.find(ScoreRating).render().text()).toBe('4.0');
   });
 });

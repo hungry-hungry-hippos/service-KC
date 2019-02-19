@@ -1,6 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import Summary from './summary';
+import Summary, { SummaryTitle, SummarySubtitle } from './summary';
 
 describe('Rendering', () => {
   let testData;
@@ -56,8 +56,8 @@ describe('Rendering', () => {
   it('sets state correctly', () => {
     wrapper.setState({ restaurant: testData }, () => {
       expect(wrapper.state('restaurant')).toEqual(testData);
-      expect(wrapper.find('h1').render().text()).toEqual('Test');
-      expect(wrapper.find('h2').render().text()).toEqual('Test headline');
+      expect(wrapper.find(SummaryTitle).render().text()).toEqual('Test');
+      expect(wrapper.find(SummarySubtitle).render().text()).toEqual('Test headline');
     });
   });
 });

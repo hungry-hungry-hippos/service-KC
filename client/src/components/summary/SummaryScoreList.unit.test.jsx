@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme from 'enzyme';
-import Scores from './summaryScoreList';
+import Scores, { SummaryScores } from './summaryScoreList';
+import ScoreItem from './summaryScoreItem';
 
 describe('Rendering', () => {
   let testData;
@@ -45,7 +46,7 @@ describe('Rendering', () => {
   });
 
   it('uses the props correctly', () => {
-    expect(wrapper.find('#summaryScores').render().find('.ScoreDiv')).toHaveLength(3);
+    expect(wrapper.find(SummaryScores).dive().find(ScoreItem)).toHaveLength(3);
   });
 
   it('should not render when no data in props', () => {
