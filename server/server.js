@@ -42,4 +42,4 @@ app.get('/reviews/:id', (req, res) => {
 });
 
 // Catch all to show restaurant page
-// app.use('*', express.static(path.join(__dirname, '..', 'client', 'dist')));
+app.use('/:id', express.static(path.join(__dirname, '..', 'client', 'dist')));
