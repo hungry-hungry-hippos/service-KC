@@ -13,6 +13,13 @@ app.listen(port, () => { console.log(`Listening on port ${port}`); });
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
+app.use((req, res, next) => {
+  res.append('Access-Control-Allow-Origin', ['*']);
+  res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 app.get('/restaurants/:id', (req, res) => {
   db.getRestaurant(req.params.id, (err, data) => {
     if (err) throw err;
@@ -35,4 +42,4 @@ app.get('/reviews/:id', (req, res) => {
 });
 
 // Catch all to show restaurant page
-app.use('*', express.static(path.join(__dirname, '..', 'client', 'dist')));
+// app.use('*', express.static(path.join(__dirname, '..', 'client', 'dist')));
