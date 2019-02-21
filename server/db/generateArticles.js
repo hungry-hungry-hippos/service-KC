@@ -59,21 +59,23 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected! Ready to insert data...');
 
-  // Generate data
-  const articles = [];
+  db.dropCollection('articles', () => {
+    // Generate data
+    const articles = [];
 
-  while (articles.length < 20) {
-    articles.push(generateArticle());
-  }
+    while (articles.length < 20) {
+      articles.push(generateArticle());
+    }
 
-  for (let i = 0; i < 8; i += 1) {
-    articles[i].restaurantIds.push(1);
-  }
+    for (let i = 0; i < 8; i += 1) {
+      articles[i].restaurantIds.push(1);
+    }
 
-  // Insert data
-  article.insertMany(articles, (err) => {
-    if (err) throw err;
-    console.log('Successful insert of articles!');
-    db.close(() => console.log('DB closed!'));
+    // Insert data
+    article.insertMany(articles, (err) => {
+      if (err) throw err;
+      console.log('Successful insert of articles!');
+      db.close(() => console.log('DB closed!'));
+    });
   });
 });

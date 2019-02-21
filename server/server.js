@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3040;
 // Potential optimization:
 // Instead of serving website that triggers API calls, send data long with it
-app.use(morgan('default'));
+app.use(morgan('dev'));
 
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
 
