@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server/server.js",
+    "start": "npm run seed-data; nodemon ./server/server.js",
     "db": "brew services start mongodb",
     "react-dev": "webpack -d --watch",
     "test": "jest",
@@ -16,7 +16,8 @@
     "lint": "eslint ./",
     "seed-restaurants": "node ./server/db/generateRestaurants.js",
     "seed-articles": "node ./server/db/generateArticles.js",
-    "seed-reviews": "node ./server/db/generateReviews.js"
+    "seed-reviews": "node ./server/db/generateReviews.js",
+    "seed-data": "npm run seed-restaurants; npm run seed-articles; npm run seed-reviews"
   },
   "dependencies": {
     "express": "^4.16.4",

@@ -19,7 +19,7 @@ class Reviews extends React.Component {
   }
 
   getReviews(id) {
-    fetch(`http://localhost:3040/reviews/${id}`)
+    fetch(`/reviews/${id}`)
       .then(res => res.json())
       .then((data) => {
         this.setState({
