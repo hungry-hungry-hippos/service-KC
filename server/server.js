@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+const expressStaticGzip = require('express-static-gzip');
 const db = require('./db/db.js');
 
 const app = express();
@@ -11,14 +12,21 @@ app.use(morgan('dev'));
 
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
 
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
-
 app.use((req, res, next) => {
   res.append('Access-Control-Allow-Origin', ['*']);
   res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.append('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
+
+app.use('/', expressStaticGzip(path.join(__dirname, '..', 'client', 'dist'), {
+  enableBrotli: true,
+  customCompressions: [{
+    encodingName: 'deflate',
+    fileExtension: 'zz',
+  }],
+  orderPreference: ['br', 'gz'],
+}));
 
 app.get('/restaurants/:id', (req, res) => {
   db.getRestaurant(req.params.id, (err, data) => {
