@@ -41,5 +41,5 @@ app.get('/reviews/:id', (req, res) => {
   });
 });
 
-// Catch all to show restaurant page
+// To show restaurant page
 app.use('/:id', express.static(path.join(__dirname, '..', 'client', 'dist')));
