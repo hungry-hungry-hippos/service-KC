@@ -11,6 +11,7 @@
     "start": "npm run seed-data; nodemon ./server/server.js",
     "db": "brew services start mongodb",
     "react-dev": "webpack -d --watch",
+    "react-prod": "webpack -p",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "lint": "eslint ./",
