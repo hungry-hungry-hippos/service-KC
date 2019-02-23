@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { restaurant, article, review } = require('./schemas.js');
 
-mongoose.connect('mongodb://localhost/hippos');
+mongoose.connect('mongodb://database:27017/hippos');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

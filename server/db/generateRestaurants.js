@@ -636,44 +636,46 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected! Ready to insert data...');
 
-  // Generate data
-  const restaurants = [
-    {
-      restaurantId: 1,
-      name: 'Izakaya Sozai',
-      headline: 'Japanese small plates in a cozy space',
-      tags: {
-        search: 'Japanese',
-        location: 'Inner Sunset',
-        price: 1,
-      },
-      scores: {
-        food: 4.5,
-        decor: 3.9,
-        service: 4.0,
-      },
-      description: 'Purists are <b>“blown away”</b> by the <b>“traditional”</b> small plates – like <b>“staggeringly good”</b> yakitori and <b>“exceptional”</b> ramen in a <b>“delicious porky broth”</b> – at this <b>“cozy”</b> Inner Sunset Japanese that also pours <b>“amazing”</b> sakes; prices are moderate, and though you\'ll likely have to <b>“wait outside”</b> for a seat in the <b>“tiny”</b> space, fans say the <b>“friendly owner”</b> has captured <b>"the true spirit of izakaya."</b>',
-      knownFor: [
-        {
-          name: 'Dinner',
-          icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/placeholder.svg',
+  db.dropCollection('restaurants', () => {
+    // Generate data
+    const restaurants = [
+      {
+        restaurantId: 1,
+        name: 'Izakaya Sozai',
+        headline: 'Japanese small plates in a cozy space',
+        tags: {
+          search: 'Japanese',
+          location: 'Inner Sunset',
+          price: 1,
         },
-        {
-          name: 'Takeout',
-          icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/takeout.svg',
+        scores: {
+          food: 4.5,
+          decor: 3.9,
+          service: 4.0,
         },
-      ],
-    },
-  ];
+        description: 'Purists are <b>“blown away”</b> by the <b>“traditional”</b> small plates – like <b>“staggeringly good”</b> yakitori and <b>“exceptional”</b> ramen in a <b>“delicious porky broth”</b> – at this <b>“cozy”</b> Inner Sunset Japanese that also pours <b>“amazing”</b> sakes; prices are moderate, and though you\'ll likely have to <b>“wait outside”</b> for a seat in the <b>“tiny”</b> space, fans say the <b>“friendly owner”</b> has captured <b>"the true spirit of izakaya."</b>',
+        knownFor: [
+          {
+            name: 'Dinner',
+            icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/placeholder.svg',
+          },
+          {
+            name: 'Takeout',
+            icon: 'https://s3-us-west-1.amazonaws.com/hrsf111hipposkc/knownfor/takeout.svg',
+          },
+        ],
+      },
+    ];
 
-  while (restaurants.length < 100) {
-    restaurants.push(generateRestaurant(restaurants.length + 1));
-  }
+    while (restaurants.length < 100) {
+      restaurants.push(generateRestaurant(restaurants.length + 1));
+    }
 
-  // Insert data
-  restaurant.insertMany(restaurants, (err) => {
-    if (err) throw err;
-    console.log('Successful insert of restaurants!');
-    db.close(() => console.log('DB closed!'));
+    // Insert data
+    restaurant.insertMany(restaurants, (err) => {
+      if (err) throw err;
+      console.log('Successful insert of restaurants!');
+      db.close(() => console.log('DB closed!'));
+    });
   });
 });

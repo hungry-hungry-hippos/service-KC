@@ -37,7 +37,7 @@ class Summary extends React.Component {
   }
 
   getRestaurant(id) {
-    fetch(`http://localhost:3040/restaurants/${id}`)
+    fetch(`/restaurants/${id}`)
       .then(res => res.json())
       .then((data) => {
         this.setState({

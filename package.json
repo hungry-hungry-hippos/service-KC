@@ -8,24 +8,31 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon ./server/server.js",
+    "start": "npm run seed-data; nodemon ./server/server.js",
     "db": "brew services start mongodb",
     "react-dev": "webpack -d --watch",
+    "react-prod": "webpack -p",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "lint": "eslint ./",
     "seed-restaurants": "node ./server/db/generateRestaurants.js",
     "seed-articles": "node ./server/db/generateArticles.js",
-    "seed-reviews": "node ./server/db/generateReviews.js"
+    "seed-reviews": "node ./server/db/generateReviews.js",
+    "seed-data": "npm run seed-restaurants; npm run seed-articles; npm run seed-reviews"
   },
   "dependencies": {
     "express": "^4.16.4",
+    "express-static-gzip": "^1.1.3",
+    "install": "^0.12.2",
     "mongoose": "^5.4.10",
     "morgan": "^1.9.1",
+    "npm": "^6.8.0",
     "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "styled-components": "^4.1.3"
+    "styled-components": "^4.1.3",
+    "compression-webpack-plugin": "^2.0.0",
+    "brotli-webpack-plugin": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -38,7 +45,6 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",

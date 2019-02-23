@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  service-kc:
+    build: .
+    image: khengschew/hippos:service-compose
+    depends_on:
+      - 'database'
+    ports:
+      - '80:3040'
+
+  database:
+    image: mongo:latest
+    ports:
+      - '27017:27017'

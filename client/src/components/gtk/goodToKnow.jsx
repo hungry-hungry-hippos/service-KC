@@ -22,11 +22,11 @@ class GoodToKnow extends React.Component {
   }
 
   static getRestaurant(id) {
-    return fetch(`http://localhost:3040/restaurants/${id}`).then(res => res.json());
+    return fetch(`/restaurants/${id}`).then(res => res.json());
   }
 
   static getArticles(id) {
-    return fetch(`http://localhost:3040/articles/${id}`).then(res => res.json());
+    return fetch(`/articles/${id}`).then(res => res.json());
   }
 
   getKnownForData(id) {

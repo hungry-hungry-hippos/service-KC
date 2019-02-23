@@ -114,21 +114,23 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   console.log('Database connected! Ready to insert data...');
 
-  // Generate data
-  const reviews = [];
-  let numReviews;
-  for (let i = 1; i <= 100; i += 1) {
-    numReviews = i === 1 ? 14 : randIdx(15) + 1;
-    while (numReviews > 0) {
-      reviews.push(generateReview(i));
-      numReviews -= 1;
+  db.dropCollection('reviews', () => {
+    // Generate data
+    const reviews = [];
+    let numReviews;
+    for (let i = 1; i <= 100; i += 1) {
+      numReviews = i === 1 ? 14 : randIdx(15) + 1;
+      while (numReviews > 0) {
+        reviews.push(generateReview(i));
+        numReviews -= 1;
+      }
     }
-  }
 
-  // Insert data
-  review.insertMany(reviews, (err) => {
-    if (err) throw err;
-    console.log('Successful insert of reviews!');
-    db.close(() => console.log('DB closed!'));
+    // Insert data
+    review.insertMany(reviews, (err) => {
+      if (err) throw err;
+      console.log('Successful insert of reviews!');
+      db.close(() => console.log('DB closed!'));
+    });
   });
 });
