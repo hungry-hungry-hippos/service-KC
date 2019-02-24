@@ -10,7 +10,7 @@
 ## Usage
 
 - To start the server and corresponding database, use `docker-compose up -d`
-  - This comman will automatically launch the necessary docker containers and seed the database
+  - This command will automatically launch the necessary docker containers and seed the database
 - To seed the database manually, use `npm run seed-data`
   - Alternatively, you could seed the collections individually:
     - To seed restaurants, run `npm run seed-restaurants`
